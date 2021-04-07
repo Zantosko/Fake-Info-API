@@ -22,10 +22,11 @@ p {
 i {
 	margin: 5px;
 	font-size: 20px;
+	transition: all 0.3s;
 }
 
 i:hover {
-	color: #e83f61;
+	color: #df265e;
 	cursor: pointer;
 }
 
@@ -41,8 +42,15 @@ button {
 	padding: 1rem 1.5rem;
 	font-size: 20px;
 	border-radius: 5px;
-	background: #e83f61;
+	background: #df265e;
 	color: #fff;
+	transition: all 0.3s;
+}
+
+button:hover {
+	background: #fff;
+	color: #df265e;
+	cursor: pointer;
 }
 
 button:focus {

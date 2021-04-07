@@ -84,19 +84,29 @@ const getPlaces = async () => {
     const h3 = document.createElement("h3");
     const p1 = document.createElement("p");
     const p2 = document.createElement("p");
+    const p3 = document.createElement("p");
+    const i1 = document.createElement("i");
+    i1.setAttribute("class", "fas fa-map-marker-alt")
     
     img.src = `${place.customfield4}`
     imgBox.append(img);
     
-    content.append(h3, p1, p2);
     
     h3.append(`${place.customfield3}`);
     p1.append(`Longitude: ${place.customfield1}`);
     p2.append(`Latitude: ${place.customfield2}`);
+    p3.append(i1)
+    content.append(h3, p1, p2, p3);
     div.append(imgBox, content);
     placesDiv.append(div);
     counter += 1
   }
+  const icon = document.querySelectorAll(".fas");
+  icon.forEach(item => {
+    item.addEventListener("click", () => {
+      alert("That won't work, these aren't real places!")
+    })
+  })
 }
 
 
